@@ -22,7 +22,7 @@ screen = pygame.display.set_mode(size)
 running = True
 clock = pygame.time.Clock()
 
-snake = [[14,14],[14,13],[14,12]]
+snake = [[0,14],[0,13],[0,12]]
 length = 3
 direction = [0,1]
 
@@ -54,7 +54,6 @@ while running:
     screen.fill(WHITE)
     snake = draw_snake(direction,snake,length)
     if(snake[0][1] == apple[1] and snake[0][0]==apple[0]):
-        print("A")
         length+=1
         apple = create_apple(snake)
     draw_apple(apple[0],apple[1])
